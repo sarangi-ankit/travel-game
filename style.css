@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    overflow-y: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    height:100vh;
+    width:100%;
+    overflow-x: hidden;
+    background: linear-gradient(-360deg,rgb(143,255,245),rgb(247,167,87));
+}
+.container::before{
+    height: 120px;
+    width:120px;
+    border-radius: 50%;
+    position: absolute;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    top:3em;
+    content:' ';
+    background:radial-gradient(rgba(230, 222,222, 0.25) rgba(255,255,255,.25));
+
+}
+.cloud{
+    background: url(images/cloud1.svg);
+    height:160px;
+    background-repeat: repeat-x;
+    margin-top: 2em;
+    border:none;
+    animation: cloudanimation 5s linear infinite;
+
+}
+.inner-city{
+    background:url("images/road1.jpg");
+    position:absolute;
+    bottom:0px;
+    width:500%;
+    height:400px;
+    background-repeat: repeat-x;
+    animation:roadanimation 4s linear infinite
+    
+    
+}
+.car{
+    position: absolute;
+    bottom:-150px;
+    left:25px;
+    width:35%;
+    animation: caranimation 4s linear infinite;
+}
+@keyframes cloudanimation{
+    100%{
+        transform: translateX(1200px);
+        opacity: .4;
+    }
+}
+@keyframes roadanimation{
+    100%{
+        transform: translateX(-2500px);
+        
+    }
+}
+@keyframes caranimation{
+    100%{
+        transform: translateY(-5px);
+        
+    }
+    50%{
+        transform: translateY(4px);
+        
+    }
+    0%{
+        transform: translateY(-5px);
+        
+    }
+}
+.daytonight{
+    background:linear-gradient(180deg,rgb(16,17,29),rgb(0,16,58)) ;
+}
