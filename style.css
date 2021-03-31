@@ -32,26 +32,27 @@
     background-repeat: repeat-x;
     margin-top: 2em;
     border:none;
-    animation: cloudanimation 5s linear infinite;
+    
 
 }
 .inner-city{
-    background:url("images/road1.jpg");
+    background:url("images/road2.jpg");
     position:absolute;
     bottom:0px;
     width:500%;
-    height:400px;
+    height:20vh;
     background-repeat: repeat-x;
-    animation:roadanimation 4s linear infinite
+    
     
     
 }
+
 .car{
     position: absolute;
     bottom:-150px;
     left:25px;
-    width:35%;
-    animation: caranimation 4s linear infinite;
+    width:32%;
+    
 }
 @keyframes cloudanimation{
     100%{
@@ -81,4 +82,31 @@
 }
 .daytonight{
     background:linear-gradient(180deg,rgb(16,17,29),rgb(0,16,58)) ;
+}
+.cityAnimation{
+    animation:roadanimation 4s linear infinite;
+}
+.carAnimation{
+    animation: caranimation 4s linear infinite;
+}
+.countdown{
+    width:50%;
+    height:50vh;
+    position: absolute;
+    left:0;
+    right:0;
+    top: 30%;
+    margin-left: 26%;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+h2{
+    color: white;
+    margin-top: 90px;
+}
+#counter{
+    color: aqua;
+}
+.cloudanimation{
+    animation: cloudanimation 5s linear infinite;
 }
